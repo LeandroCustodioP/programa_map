@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_596fde0859a7487794f491aa1f36aa21 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_596fde0859a7487794f491aa1f36aa21" ></div>
+        
+</body>
+<script>    
+    
+            var map_596fde0859a7487794f491aa1f36aa21 = L.map(
+                "map_596fde0859a7487794f491aa1f36aa21",
+                {
+                    center: [-3.9767176986301367, -39.63276701506849],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5253968913e04c3f8689153b7575d943 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_596fde0859a7487794f491aa1f36aa21);
+        
+    
+            var fast_marker_cluster_3dfcceed7e8f4f159387092fef00b7c2 = (function(){
+                
+                var callback = function (row) {
+                    var icon = L.AwesomeMarkers.icon();
+                    var marker = L.marker(new L.LatLng(row[0], row[1]));
+                    marker.setIcon(icon);
+                    return marker;
+                };
+
+                var data = [[-6.5348688, -39.4966658], [-5.1455607, -38.0984936], [-3.7304512, -38.5217989], [-3.499329, -39.583571], [-3.7304512, -38.5217989], [-7.285445, -40.457306], [-3.7304512, -38.5217989], [19.3769875, -98.9611378], [-4.831508, -37.780997], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-6.0936464, -39.4543204], [-4.831508, -37.780997], [-4.831508, -37.780997], [-6.361934, -39.2972233], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.499329, -39.583571], [-3.9063117, -38.387504], [-5.1782451, -40.6696545], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-5.2440865, -38.1284605], [-4.9441876, -37.9811859], [-4.3010895, -38.4976923], [-5.1782451, -40.6696545], [-4.9354279, -37.9783838], [-4.4910653, -38.5964829], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-4.9706021, -39.0158403], [-3.7304512, -38.5217989], [-6.0936464, -39.4543204], [-4.9354279, -37.9783838], [-4.3010895, -38.4976923], [-4.8330075, -40.3210323], [-6.5224934, -39.5247183], [-3.7300563, -38.6593082], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-3.7304512, -38.5217989], [-5.1782451, -40.6696545], [-4.7051681, -40.565519], [-3.7300563, -38.6593082], [-3.7304512, -38.5217989], [-5.1782451, -40.6696545], [-5.1782451, -40.6696545], [-5.1782451, -40.6696545], [-4.831508, -37.780997]];
+                var cluster = L.markerClusterGroup({"popup": ["PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", NaN, "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE MONITORIA ACAD\u00caMICA - PROMAC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL - PET/MEC", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE", "PROGRAMA DE EDUCA\u00c7\u00c3O TUTORIAL INSTITUCIONAL - PET/UECE"]});
+
+                for (var i = 0; i < data.length; i++) {
+                    var row = data[i];
+                    var marker = callback(row);
+                    marker.addTo(cluster);
+                }
+
+                cluster.addTo(map_596fde0859a7487794f491aa1f36aa21);
+                return cluster;
+            })();
+        
+</script>
